@@ -67,8 +67,7 @@ body {
   max-width: 100%;
 }
 
-.hours,
-.location {
+.restaurantInfo {
   text-align: center;
   background-color: white;
   padding: 15px;
@@ -76,5 +75,5 @@ body {
 
 ul {
   list-style-type: none;
-  padding: 0px;
+  padding: 0px 0px 15px 0px;
 }
