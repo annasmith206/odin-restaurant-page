@@ -24,9 +24,37 @@ h6 {
 
 body {
   background: url("./images/dinerBackground.jpg");
+  background-attachment: fixed;
   font-family: "Raleway";
   color: rgb(10 43 63);
   margin: 0;
+  background-color: rgb(7 74 152);
+}
+
+nav {
+  box-shadow: rgb(0 0 0 / 25%) 6px 8px 6px;
+  background-color: rgb(10 43 63);
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+nav > button {
+  font-family: "Rubik";
+  border: none;
+  background-color: rgb(10 43 63);
+  color: white;
+  font-size: 1.3rem;
+  padding: 15px 25px;
+}
+
+nav > button:hover {
+  background-color: rgb(7 74 152);
+}
+
+nav > button.selected {
+  border-bottom: 5px solid white;
+  padding-bottom: 10px;
 }
 
 .logo {
@@ -36,11 +64,10 @@ body {
 
 .welcome-container {
   background-color: rgb(255, 255, 255);
-  position: relative;
   max-width: 750px;
   min-width: 400px;
   padding: 40px;
-  margin: 40px auto;
+  margin: 110px auto 40px auto;
   align-items: center;
   text-align: center;
 }
@@ -68,6 +95,7 @@ body {
 }
 
 .restaurantInfo {
+  margin-top: 40px;
   text-align: center;
   background-color: white;
   padding: 15px;
@@ -76,4 +104,10 @@ body {
 ul {
   list-style-type: none;
   padding: 0px 0px 15px 0px;
+}
+
+footer {
+  padding: 5px 10px;
+  background-color: rgb(8 73 152);
+  color: white;
 }
