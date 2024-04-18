@@ -5,7 +5,7 @@ import DisplayImage1 from "./../images/restaurantDisplay1.png";
 import DisplayImage2 from "./../images/restaurantDisplay2.png";
 import DisplayImage3 from "./../images/restaurantDisplay3.png";
 
-export class ViewBuilder {
+export class HomeViewBuilder {
   static #hoursTextList = [
     "Sunday: 8am - 8pm",
     "Monday: 6am - 6pm",
@@ -16,11 +16,10 @@ export class ViewBuilder {
     "Saturday: 8am - 10pm",
   ];
 
-  static buildHomePage(containerStr) {
-    const container = document.querySelector(containerStr);
-    container.appendChild(ViewBuilder.#buildWelcomeContainer());
-    container.appendChild(ViewBuilder.#buildImageCarousel());
-    container.appendChild(ViewBuilder.#buildRestaurantInfo());
+  static buildHomePage(container) {
+    container.appendChild(HomeViewBuilder.#buildWelcomeContainer());
+    container.appendChild(HomeViewBuilder.#buildImageCarousel());
+    container.appendChild(HomeViewBuilder.#buildRestaurantInfo());
   }
 
   static #buildWelcomeContainer() {
@@ -29,7 +28,7 @@ export class ViewBuilder {
 
     // Add logo
     welcomeContainer.appendChild(
-      ViewBuilder.#makeImage(Logo, "Pip's Logo", "logo")
+      HomeViewBuilder.#makeImage(Logo, "Pip's Logo", "logo")
     );
 
     // add title
@@ -52,19 +51,19 @@ export class ViewBuilder {
 
     // add images
     imageCarousel.appendChild(
-      ViewBuilder.#makeImage(
+      HomeViewBuilder.#makeImage(
         DisplayImage1,
         "Image of a woman taking a bite of foot at a restaurant"
       )
     );
     imageCarousel.appendChild(
-      ViewBuilder.#makeImage(
+      HomeViewBuilder.#makeImage(
         DisplayImage2,
         "Image of a woman holding a burger and smiling"
       )
     );
     imageCarousel.appendChild(
-      ViewBuilder.#makeImage(
+      HomeViewBuilder.#makeImage(
         DisplayImage3,
         "Image of a 3 friends clinking beers at a restaurant"
       )
@@ -83,7 +82,7 @@ export class ViewBuilder {
     infoContainer.appendChild(hoursHeading);
 
     const hoursList = document.createElement("ul");
-    ViewBuilder.#hoursTextList.forEach((hours) => {
+    HomeViewBuilder.#hoursTextList.forEach((hours) => {
       const li = document.createElement("li");
       li.textContent = hours;
       hoursList.appendChild(li);

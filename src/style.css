@@ -22,6 +22,10 @@ h6 {
   color: black;
 }
 
+#content {
+  min-height: 100vh;
+}
+
 body {
   background: url("./images/dinerBackground.jpg");
   background-attachment: fixed;
